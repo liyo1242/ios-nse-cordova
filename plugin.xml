@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-nse" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>nse</name>
+    <description>ios nse plugin</description>
+    
+    <js-module name="nse" src="www/nse.js">
+        <clobbers target="cordova.plugins.nse" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="nse">
+                <param name="ios-package" value="nse"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/nse.swift" />
+        <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
+    </platform>
+
+    <hook type="after_platform_add" src="hooks/prerequisites.js"/>
+    <hook type="after_platform_add" src="hooks/copyExtensionFolderToIosProjectFolder.js"/>
+    <hook type="after_platform_add" src="hooks/addTodayWidgetToProject.js"/>
+    <hook type="after_prepare" src="hooks/fixAppEntitlements.js"/>
+</plugin>

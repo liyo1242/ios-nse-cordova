@@ -1,0 +1,31 @@
+{
+  "name": "nse",
+  "version": "0.0.1",
+  "description": "this is a plugin for ios nse connect",
+  "cordova": {
+    "id": "cordova-plugin-nse",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem: cordova",
+    "cordova-ios"
+  ],
+  "dependencies": {
+    "elementtree": "^0.1.7",
+    "file-system": "^2.2.2",
+    "path": "^0.12.7",
+    "plist": "^2.1.0",
+    "q": "^1.5.1",
+    "xcode": "git+https://github.com/apache/cordova-node-xcode.git"
+  },
+  "devDependencies": {
+    "husky": "^0.13.4",
+    "lint-staged": "^3.6.0",
+    "prettier": "^1.4.2"
+  },
+  "author": "",
+  "license": "MIT"
+}
